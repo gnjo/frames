@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap');
+/*
+body{
+ background-color:black;
+ color:white;
+ margin:4rem auto;
+ width:30rem;
+}*/
+/*.x{width:50rem;}*/
+.frame{
+ line-height:1;
+ font-size:14px;
+ width:100%; 
+ border:2px solid;
+ font-family:'share tech mono',monospace;
+ box-sizing:border-box;
+ background-color:black; 
+}
+.frame+.frame{margin-top:1em}
+.w{
+ display:flex;
+ flex-direction:row;
+ /*width:100%;*/
+ padding:0.5rem;
+}
+.w.bar{
+ border-bottom:0px solid white;
+}
+.w.editor{
+ border-top:0px solid white;
+}
+.clo{
+ min-width:1em;
+ cursor:pointer;
+ text-align:right; 
+}
+.clo:before{
+ content:attr(data-text);
+}
+.cap{/*background-color:red;*/
+ flex-grow:1;
+ margin-left:2.5em;
+}
+.stt{/*background-color:crimson;*/
+ text-align:right;min-width:6em;
+ cursor:pointer;
+}
+.stt:before{
+ content:attr(data-text);
+}
+
+[data-mode='COD']{color:#abc}
+[data-mode='COD'] .stt{color:#f26}
+[data-mode='FIX']{color:#abc}
+[data-mode='FIX'] .ed{pointer-events:none}
+[data-mode='FIX']{color:#abc;}
+[data-mode='WIP']{color:#456}
+
+[data-close='true'] .w.editor{
+ line-height:0!important;
+ font-size:0!important; 
+}
+.num{/*background-color:blue;*/
+ min-width:2.5em;
+ white-space:pre-wrap;
+}
+.ed{/*background-color:skyblue;*/
+ flex-grow:1
+}
+.wipe{
+ color:#456;
+}
+.bar{
+ background-color:#050a0f;
+}
+
+[contenteditable]{outline:none}
+
+.cap:focus{
+ color:white;
+}
+
+.single{/*background-color:#456;*/
+}
+.single{
+ outline:none;
+ white-space: nowrap;
+ /*width:200px;*/
+ overflow: hidden;
+} 
+.single br {
+ display:none;
+}
+.single * {
+ display:inline;
+ white-space:nowrap;
+}
+
